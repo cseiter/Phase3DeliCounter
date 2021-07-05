@@ -1,8 +1,6 @@
 # Write your code here.
-katz_deli = []
-
 def line(katz_deli)
-    if katz_deli.count > 0 then
+    if !katz_deli.empty? then
         line_array = []
         katz_deli.map.with_index(1) {|cust_name,line_place| line_array << "#{line_place}. #{cust_name}"}
         line_string = line_array.join(" ")
@@ -18,18 +16,10 @@ def take_a_number(katz_deli, name)
 end
 
 def now_serving(katz_deli)
-    if katz_deli.count > 0 then
+    if !katz_deli.empty? then
         puts "Currently serving #{katz_deli.first}."
         katz_deli.shift
     else
         puts "There is nobody waiting to be served!"
     end
 end
-
-puts katz_deli
-take_a_number(katz_deli,"Grace")
-puts katz_deli
-line(katz_deli)
-puts katz_deli
-now_serving(katz_deli)
-puts katz_deli
